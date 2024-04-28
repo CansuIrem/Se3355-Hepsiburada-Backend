@@ -9,6 +9,9 @@ const advertSchema = new Schema(
 		},
         title:{
             type:String,  
+        },
+		subTitle:{
+            type:String,  
         }
 	},
 	{ timestamps: true }

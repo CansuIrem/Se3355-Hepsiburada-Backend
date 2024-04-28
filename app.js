@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.json({limit: "50mb"}));
 import advertismentModel from "./model/advertismentModel.js";
 import productModel from "./model/productModel.js";
-
+import { configDotenv } from "dotenv";
 import connectToDb from "./utils/connectToDB.js";
 const port = 5500;
 
@@ -127,7 +127,7 @@ app.post("/searchProduct",async(req,res)=>{
     }
 })
 
-app.listen(port, () => {
+app.listen( process.env.PORT || port, () => {
     console.log(`App started at http://localhost:${port}`);
     connectToDb();
 });

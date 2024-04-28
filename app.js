@@ -8,7 +8,7 @@ import advertismentModel from "./model/advertismentModel.js";
 import productModel from "./model/productModel.js";
 
 import connectToDb from "./utils/connectToDB.js";
-const port = 3000;
+const port = 5500;
 
 app.get("/", async (req, res) => {
     res.status(200).json({

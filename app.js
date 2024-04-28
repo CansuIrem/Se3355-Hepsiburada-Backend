@@ -7,7 +7,9 @@ app.use(express.json({limit: "50mb"}));
 import advertismentModel from "./model/advertismentModel.js";
 import productModel from "./model/productModel.js";
 import { configDotenv } from "dotenv";
+import cors from cors;
 import connectToDb from "./utils/connectToDB.js";
+app.use(cors());
 const port = 5500;
 
 app.get("/", async (req, res) => {

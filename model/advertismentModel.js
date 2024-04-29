@@ -12,6 +12,9 @@ const advertSchema = new Schema(
         },
 		subTitle:{
             type:String,  
+        },
+		photoCategory:{
+            type:String,  
         }
 	},
 	{ timestamps: true }
